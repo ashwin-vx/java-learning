@@ -1,15 +1,8 @@
 package au.com.learn;
 
-import org.springframework.stereotype.Service;
-
-import java.math.BigInteger;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
-import java.util.stream.IntStream;
-import java.util.stream.Stream;
 
-@Service
 public class CommonService {
 
 	/**
@@ -33,10 +26,6 @@ public class CommonService {
 	 */
 	public List<Integer> returnPrimes(Integer start, Integer end) {
 		List<Integer> primes = new ArrayList<>();
-		IntStream s= IntStream.rangeClosed(start, end);
-		primes = s.filter(CommonService::isPrime).boxed().collect(Collectors.toList());
-
-
 
 		return primes;
 	}
